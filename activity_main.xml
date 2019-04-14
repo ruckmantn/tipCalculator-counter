@@ -1,0 +1,190 @@
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/finalDividedTotoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+
+        android:layout_marginBottom="85dp"
+        android:text="@string/finalDividedTotal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/finalTotal" />
+
+    <TextView
+        android:id="@+id/finalDividedTotal"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="72dp"
+        android:text="@string/finalTotalPerPeepText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/divideNumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/divideNum"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/divideNum"
+        app:layout_constraintEnd_toStartOf="@+id/divideNum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divideNum" />
+
+    <EditText
+        android:id="@+id/divideNum"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divideNumTextView"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="136dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/tenPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tenPer"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <RadioButton
+            android:id="@+id/fifteenPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteenPer"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="338dp" />
+
+        <RadioButton
+            android:id="@+id/twentyPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twentyPer"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="387dp" />
+
+        <RadioButton
+            android:id="@+id/customPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customPer"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="436dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/calcButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resetButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="115dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="228dp"
+        android:text="@string/resetButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/checkAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="74dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/checkAmount"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkAmount"
+        app:layout_constraintEnd_toStartOf="@+id/checkAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/finalTotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/finalTotalText"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/finalTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="@string/finalTotal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/finalDividedTotal"
+        app:layout_constraintStart_toStartOf="@+id/finalDividedTotal"
+        app:layout_constraintTop_toBottomOf="@+id/customTip" />
+
+    <EditText
+        android:id="@+id/customTip"
+        android:layout_width="69dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintStart_toEndOf="@+id/finalTotalText" />
+
+</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
